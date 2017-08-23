@@ -8,7 +8,7 @@ end
 
 host = ARGV[0]
 
-system("nmap --script ssl-cert,ssl-enum-ciphers -p 443 -oX output.xml #{host} > /dev/null")
+system("nmap --script ssl-enum-ciphers -p 443 -Pn -oX output.xml #{host} > /dev/null")
 
 if ($? != 0)
     puts "nmap failed"
