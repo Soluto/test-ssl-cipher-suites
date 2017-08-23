@@ -8,6 +8,8 @@ end
 
 host = ARGV[0]
 
+puts "running nmap scan"
+
 system("nmap --script ssl-enum-ciphers -p 443 -Pn -oX output.xml #{host} > /dev/null")
 
 if ($? != 0)
