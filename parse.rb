@@ -16,6 +16,13 @@ if ($? != 0)
 end
 
 nmap_result = Nokogiri::XML(File.open("output.xml")) 
+
+if (nmap_result.xpath("//port[@protocol='tcp' and  @portid='443']/state[@state='open']").empty? )
+    state = nmap_result.xpath("//port[@protocol='tcp' and  @portid='443']/state")
+    puts "Host state does not indicate success: #{state}"
+    exit 1
+end
+
 ciphers = nmap_result.xpath("//table[@key='ciphers']/table")
 
 found_weak_certificate = false
@@ -34,3 +41,4 @@ FileUtils.rm("output.xml")
 if found_weak_certificate 
     exit 1
 end
+
