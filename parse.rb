@@ -18,7 +18,7 @@ if ($? != 0)
 end
 
 nmap_result = Nokogiri::XML(File.open("output.xml")) 
-
+puts nmap_result
 if (nmap_result.xpath("//port[@protocol='tcp' and  @portid='443']/state[@state='open']").empty? )
     state = nmap_result.xpath("//port[@protocol='tcp' and  @portid='443']/state")
     puts "Host state does not indicate success: #{state}"
@@ -27,20 +27,31 @@ end
 
 ciphers = nmap_result.xpath("//table[@key='ciphers']/table")
 
-found_weak_certificate = false
+found_weak_cipher = false
+found_fs_ciphers = false
 
 ciphers.each do |cipher|
     grade = cipher.xpath("elem[@key='strength']//text()").text
     name = cipher.xpath("elem[@key='name']//text()").text
     if (grade != 'A')
         puts "found weak certificate: #{name}, garde: #{grade}"
-        found_weak_certificate = true
+        found_weak_cipher = true
+    end
+
+    if (name.include?('ECDHE') || name.include?("DHE"))
+        found_fs_ciphers = true
     end
 end
 
 FileUtils.rm("output.xml")
 
-if found_weak_certificate 
+#Apple ATS require at least one FS ciphers, otherwise the connections blocked
+if  !found_fs_ciphers
+    puts "no FS ciphers found"
+    exit 1
+end
+
+if found_weak_cipher
     exit 1
 end
 
