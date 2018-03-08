@@ -1,5 +1,5 @@
 FROM ubuntu:artful
-LABEL maintainer="omerlh@gmail.com∂"
+LABEL maintainer="omerlh@gmail.com"
 WORKDIR app
 COPY Gemfile Gemfile.lock /app/
 RUN apt-get update && apt-get install -y --no-install-recommends bison \

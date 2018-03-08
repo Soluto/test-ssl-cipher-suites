@@ -1,3 +1,3 @@
-source 'https://rubygems.org' do
-    gem 'nokogiri'    
-end
+source 'https://rubygems.org' 
+
+gem 'nokogiri', '~> 1.8.1'
