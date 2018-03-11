@@ -5,7 +5,7 @@ def process_nmap_response(nmap_result)
     if (nmap_result.xpath("//port[@protocol='tcp' and  @portid='443']/state[@state='open']").empty? )
         state = nmap_result.xpath("//port[@protocol='tcp' and  @portid='443']/state")
         puts "Host state does not indicate success: #{state}"
-        exit 3
+        return 3
     end
 
     ciphers = nmap_result.xpath("//table[@key='ciphers']/table")
@@ -41,7 +41,6 @@ end
 
 if $0 == __FILE__
     raise ArgumentError, "Usage: #{$0} hostname" unless ARGV.length > 0
-    puts hm2s(ARGV.join(' '))
 
     host = ARGV[0]
 
