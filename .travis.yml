@@ -12,11 +12,6 @@ script:
   - docker build . -t local/test-ssl-cipher-suites --label COMMIT_HASH=$TRAVIS_COMMIT --label BUILD_ID=$TRAVIS_BUILD_ID
   - docker run -it --rm local/test-ssl-cipher-suites blog.solutotlv.com
 
-after_success:
-  - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
-      
-    fi
-
 deploy:
   provider: script
   script: bash scripts/push_image.sh
