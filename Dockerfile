@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends bison \
         zlib1g-dev \ 
         nmap && \
     rm -rf /var/lib/apt/lists/* && \
-    bundle install
+    bundle install --without development test
 COPY . /app
 
 ENTRYPOINT [ "ruby", "./parse.rb" ]
