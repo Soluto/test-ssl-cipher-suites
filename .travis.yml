@@ -8,3 +8,4 @@ services:
 script:
   - bundle install
   - bundle exec rspec
+  - docker build . -t local/test-ssl-cipher-suites
