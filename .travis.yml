@@ -9,11 +9,12 @@ script:
   - bundle install
   - bundle exec rspec
   - docker build . -t local/test-ssl-cipher-suites --label COMMIT_HASH=$TRAVIS_COMMIT 
-  - docker run -it --rm local/test blog.solutotlv.com
+  - docker run -it --rm local/test-ssl-cipher-suites blog.solutotlv.com
 
 after_success:
   - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
       docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD ;
       docker tag local/test-ssl-cipher-suites soluto/test-ssl-cipher-suites:$TRAVIS_BUILD_NUMBER
       docker push soluto/test-ssl-cipher-suites:$TRAVIS_BUILD_NUMBER;
+      docker logout
     fi
