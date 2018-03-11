@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Soluto/test-ssl-cipher-suites.svg?branch=master)](https://travis-ci.org/Soluto/test-ssl-cipher-suites)
+[![Build Status](https://travis-ci.org/Soluto/test-ssl-cipher-suites.svg?branch=master)](https://travis-ci.org/Soluto/test-ssl-cipher-suites) [![Dockerhub pulls](https://img.shields.io/docker/pulls/soluto/test-ssl-cipher-suites.svg)](https://hub.docker.com/r/soluto/test-ssl-cipher-suites)
 
 # Test TLS Cipher Suites
 A small ruby script that use [Nmap](https://nmap.org/) to test the TLS cipher suites used by a given host.
