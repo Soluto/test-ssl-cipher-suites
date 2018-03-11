@@ -15,3 +15,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends bison \
     rm -rf /var/lib/apt/lists/* && \
     bundle install
 COPY . /app
+
+ENTRYPOINT [ "ruby", "./parse.rb" ]
