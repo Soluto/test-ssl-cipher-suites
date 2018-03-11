@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Sun Mar 11 10:38:28 2018 as: nmap -&#45;script ssl-enum-ciphers -p 443 -Pn -oX output.xml unreachable.test.com -->
+<nmaprun scanner="nmap" args="nmap -&#45;script ssl-enum-ciphers -p 443 -Pn -oX output.xml unreachable.test.com" start="1520757508" startstr="Sun Mar 11 10:38:28 2018" version="7.60" xmloutputversion="1.04">
+    <scaninfo type="connect" protocol="tcp" numservices="1" services="443"/>
+    <verbose level="0"/>
+    <debugging level="0"/>
+    <host starttime="1520757508" endtime="1520757510">
+        <status state="up" reason="user-set" reason_ttl="0"/>
+        <address addr="1.2.3.4" addrtype="ipv4"/>
+        <hostnames>
+            <hostname name="unreachable.test.com" type="user"/>
+        </hostnames>
+        <ports>
+            <port protocol="tcp" portid="443">
+                <state state="filtered" reason="no-response" reason_ttl="0"/>
+                <service name="https" method="table" conf="3"/>
+            </port>
+        </ports>
+    </host>
+    <runstats>
+        <finished time="1520757510" timestr="Sun Mar 11 10:38:30 2018" elapsed="2.49" summary="Nmap done at Sun Mar 11 10:38:30 2018; 1 IP address (1 host up) scanned in 2.49 seconds" exit="success"/>
+        <hosts up="1" down="0" total="1"/>
+    </runstats>
+</nmaprun>

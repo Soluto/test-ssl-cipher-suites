@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.60 scan initiated Sun Mar 11 10:32:24 2018 as: nmap -&#45;script ssl-enum-ciphers -p 443 -Pn -oX output.xml goodciphers.test.com -->
+<nmaprun scanner="nmap" args="nmap -&#45;script ssl-enum-ciphers -p 443 -Pn -oX output.xml goodciphers.test.com" start="1520757144" startstr="Sun Mar 11 10:32:24 2018" version="7.60" xmloutputversion="1.04">
+    <scaninfo type="connect" protocol="tcp" numservices="1" services="443"/>
+    <verbose level="0"/>
+    <debugging level="0"/>
+    <host starttime="1520757144" endtime="1520757155">
+        <status state="up" reason="user-set" reason_ttl="0"/>
+        <address addr="23.96.89.191" addrtype="ipv4"/>
+        <hostnames>
+            <hostname name="goodciphers.test.com" type="user"/>
+        </hostnames>
+        <ports>
+            <port protocol="tcp" portid="443">
+                <state state="open" reason="syn-ack" reason_ttl="0"/>
+                <service name="https" method="table" conf="3"/>
+                <script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (rsa 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;  least strength: A">
+                    <table key="TLSv1.0">
+                        <table key="ciphers">
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+                            </table>
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+                            </table>
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+                            </table>
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+                            </table>
+                        </table>
+                        <table key="compressors">
+                            <elem>NULL</elem>
+                        </table>
+                        <elem key="cipher preference">server</elem>
+                    </table>
+                    <table key="TLSv1.1">
+                        <table key="ciphers">
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+                            </table>
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+                            </table>
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+                            </table>
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+                            </table>
+                        </table>
+                        <table key="compressors">
+                            <elem>NULL</elem>
+                        </table>
+                        <elem key="cipher preference">server</elem>
+                    </table>
+                    <table key="TLSv1.2">
+                        <table key="ciphers">
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+                            </table>
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+                            </table>
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+                            </table>
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+                            </table>
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+                            </table>
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+                            </table>
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+                            </table>
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+                            </table>
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+                            </table>
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+                            </table>
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+                            </table>
+                            <table>
+                                <elem key="kex_info">rsa 2048</elem>
+                                <elem key="strength">A</elem>
+                                <elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+                            </table>
+                        </table>
+                        <table key="compressors">
+                            <elem>NULL</elem>
+                        </table>
+                        <elem key="cipher preference">server</elem>
+                    </table>
+                    <elem key="least strength">A</elem>
+                </script>
+            </port>
+        </ports>
+        <times srtt="144523" rttvar="144523" to="722615"/>
+    </host>
+    <runstats>
+        <finished time="1520757155" timestr="Sun Mar 11 10:32:35 2018" elapsed="11.26" summary="Nmap done at Sun Mar 11 10:32:35 2018; 1 IP address (1 host up) scanned in 11.26 seconds" exit="success"/>
+        <hosts up="1" down="0" total="1"/>
+    </runstats>
+</nmaprun>
